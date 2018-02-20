@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>type</field>
+        <global>true</global>
+        <messages/>
+        <name>set the Slot Number</name>
+        <order>100</order>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (newValue === '') {
+      return;
+   }
+	if(g_form.isNewRecord()){
+		var number =0;
+		var flag = false;
+		var counter = g_scratchpad.counter;
+		if(counter.length > 0){
+			for(var i=0;i<counter.length;i++){
+				if(newValue == counter[i].type){
+					flag = true;
+					number = counter[i].max_val;
+				}
+			}
+		}
+		if(counter.length == 0 || flag == false){
+			number = 0;
+		}
+
+		number = parseInt(number)+1;
+		g_form.setValue('slot_serial_number',number);
+		g_form.setValue('slot_number',newValue+number);
+	}else{
+		g_form.setReadOnly('type',true);
+		
+	}
+	
+
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-19 18:01:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a506d8cb4f909b40a0a27bb28110c736</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>set the Slot Number</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Parking" source="x_67546_parking">de3a3b764f509b40a0a27bb28110c781</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Parking">de3a3b764f509b40a0a27bb28110c781</sys_scope>
+        <sys_update_name>sys_script_client_a506d8cb4f909b40a0a27bb28110c736</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-19 20:27:57</sys_updated_on>
+        <table>x_67546_parking_parking_slots</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

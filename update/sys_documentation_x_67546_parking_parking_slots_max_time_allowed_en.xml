@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="max_time_allowed" label="Max time allowed" language="en" table="x_67546_parking_parking_slots">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>max_time_allowed</element>
+            <help/>
+            <hint/>
+            <label>Max time allowed</label>
+            <language>en</language>
+            <name>x_67546_parking_parking_slots</name>
+            <plural>Max time allowed</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-19 16:12:33</sys_created_on>
+            <sys_id>e2bdb73a4f509b40a0a27bb28110c7a6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Max time allowed</sys_name>
+            <sys_package display_value="Parking" source="x_67546_parking">de3a3b764f509b40a0a27bb28110c781</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Parking">de3a3b764f509b40a0a27bb28110c781</sys_scope>
+            <sys_update_name>sys_documentation_x_67546_parking_parking_slots_max_time_allowed_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-19 16:12:33</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Visitor" max_length="40" name="x_67546_parking_visitor" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Parked on" max_length="40" name="parked_on" type="glide_date_time"/>
+        <element label="Removed on" max_length="40" name="removed_on" type="glide_date_time"/>
+        <element label="Slot Number" max_length="50" name="slot_number" type="string"/>
+        <element display="true" label="Visitor name" max_length="200" name="visitor_name" type="string"/>
+    </element>
+</database>

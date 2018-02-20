@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="parking slots" max_length="40" name="x_67546_parking_parking_slots" type="collection">
+        <element label="Alloted" max_length="40" name="alloted" type="boolean"/>
+        <element label="Max time allowed" max_length="40" name="max_time_allowed" type="glide_time"/>
+        <element display="true" label="Slot Number" max_length="30" name="slot_number" read_only="true" type="string"/>
+        <element label="slot serial number" max_length="40" name="slot_serial_number" read_only="true" type="integer"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element label="Vip" sequence="10" value="vip"/>
+                <element label="Regular" sequence="20" value="regular"/>
+                <element label="Visitor" sequence="30" value="visitor"/>
+            </choice>
+        </element>
+    </element>
+</database>

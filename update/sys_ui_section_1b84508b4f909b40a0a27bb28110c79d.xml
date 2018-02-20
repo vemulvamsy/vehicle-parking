@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="1b84508b4f909b40a0a27bb28110c79d" sys_domain="global" table="x_67546_parking_parking_slots" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>slot_number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-19 20:25:56</sys_created_on>
+            <sys_id>52b73cc74f149b40a0a27bb28110c75f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_parking_slots" sys_domain="global" view="Default view">1b84508b4f909b40a0a27bb28110c79d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-19 20:25:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>type</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-19 20:25:56</sys_created_on>
+            <sys_id>d2b73cc74f149b40a0a27bb28110c75f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_parking_slots" sys_domain="global" view="Default view">1b84508b4f909b40a0a27bb28110c79d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-19 20:25:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-19 20:25:56</sys_created_on>
+            <sys_id>56b73cc74f149b40a0a27bb28110c75f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_parking_slots" sys_domain="global" view="Default view">1b84508b4f909b40a0a27bb28110c79d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-19 20:25:56</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>max_time_allowed</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-19 20:25:56</sys_created_on>
+            <sys_id>d6b73cc74f149b40a0a27bb28110c75f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_parking_slots" sys_domain="global" view="Default view">1b84508b4f909b40a0a27bb28110c79d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-19 20:25:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>allotted_for</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-19 20:25:56</sys_created_on>
+            <sys_id>5ab73cc74f149b40a0a27bb28110c75f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_parking_slots" sys_domain="global" view="Default view">1b84508b4f909b40a0a27bb28110c79d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-19 20:25:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>slot_serial_number</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-19 20:25:56</sys_created_on>
+            <sys_id>dab73cc74f149b40a0a27bb28110c75f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_parking_slots" sys_domain="global" view="Default view">1b84508b4f909b40a0a27bb28110c79d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-19 20:25:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>alloted</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-19 21:43:45</sys_created_on>
+            <sys_id>4689c1874f549b40a0a27bb28110c7c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_parking_slots" sys_domain="global" view="Default view">1b84508b4f909b40a0a27bb28110c79d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-19 21:43:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_67546_parking_parking_slots</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-19 17:52:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1b84508b4f909b40a0a27bb28110c79d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_67546_parking_parking_slots</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Parking" source="x_67546_parking">de3a3b764f509b40a0a27bb28110c781</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Parking">de3a3b764f509b40a0a27bb28110c781</sys_scope>
+            <sys_update_name>sys_ui_section_1b84508b4f909b40a0a27bb28110c79d</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-19 17:52:16</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

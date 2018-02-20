@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function removeVisitorSlot(){
+	var user_name = gel('visitorname').value;
+	var ga = new GlideAjax('ParkingUtils');
+	ga.addParam('sysparm_name','releaseVisitorParkingSlot');
+	ga.addParam('sysparm_user',user_name);
+	ga.getXML(parkingCallback);
+}
+
+function getParkingDetails(){
+	var user_id = gel('user_id').value;
+	var ga = new GlideAjax('ParkingUtils');
+	ga.addParam('sysparm_name','releaseParkingSlot');
+	ga.addParam('sysparm_user',user_id);
+	ga.getXML(parkingCallback);
+}
+function parkingCallback(response){
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	var obj = answer.evalJSON();
+	if(obj.time == ''){
+		gel('error').innerHTML = obj.msg; 
+		gel('slot').innerHTML = '';
+		gel('output').innerHTML = '';
+	}else{
+		gel('error').innerHTML = ''; 
+		gel('slot').innerHTML = "Total time: "+obj.time;
+		gel('output').innerHTML = "Exit Time: "+obj.exit_time;
+	}
+	
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_67546_parking_Parking Exit.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="jumbotron" style="background:#dddddd;">
+				  <h2 class="display-4">Thankyou</h2>
+				  <p class="lead">Please swipe your card</p>
+				  <form class="form-inline">
+					 <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+					  <div class="input-group mb-2 mr-sm-2">
+						<g:ui_reference name="user_id" class="form-control" placeholder="Username" table="sys_user" query="active=true" show_popup="true" show_lookup="true" onChange="getParkingDetails()"/>
+					  </div>
+					   <hr />
+					   <h3>Are you visitor?</h3>
+					   <div class="form-group">
+						<g:ui_reference name="visitorname" query="removed_onISEMPTY" table="x_67546_parking_visitor" onChange="removeVisitorSlot()" />  
+					  </div>
+					 
+					</form>
+					<hr class="my-4"></hr>
+					<h2 id="error" style="color:#ff0000;"></h2>
+					<h1 id="slot"></h1>
+				    <p id="output">
+				    
+					</p>
+				  
+				</div>
+			</div>
+		</div>
+	</div>
+	
+  
+</j:jelly>]]></html>
+        <name>Parking Exit</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-20 18:57:22</sys_created_on>
+        <sys_id>7a0da9d74f50db40a0a27bb28110c7ff</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Parking Exit</sys_name>
+        <sys_package display_value="Parking" source="x_67546_parking">de3a3b764f509b40a0a27bb28110c781</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Parking">de3a3b764f509b40a0a27bb28110c781</sys_scope>
+        <sys_update_name>sys_ui_page_7a0da9d74f50db40a0a27bb28110c7ff</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-20 21:42:15</sys_updated_on>
+    </sys_ui_page>
+</record_update>
