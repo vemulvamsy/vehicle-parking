@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Parking">4dcaff764f509b40a0a27bb28110c7b8</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage display_value="Parking Reports">ab471e1f4f14db40a0a27bb28110c79d</homepage>
+        <image/>
+        <link_type>HOMEPAGE</link_type>
+        <map_page/>
+        <mobile_title>Home</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>10</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report display_value="Parking Slots">564696db4f14db40a0a27bb28110c7a8</report>
+        <roles/>
+        <survey/>
+        <survey_overwrite>true</survey_overwrite>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-20 21:58:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0866dedb4f14db40a0a27bb28110c72b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Parking Home</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Parking" source="x_67546_parking">de3a3b764f509b40a0a27bb28110c781</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Parking">de3a3b764f509b40a0a27bb28110c781</sys_scope>
+        <sys_update_name>sys_app_module_0866dedb4f14db40a0a27bb28110c72b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-20 22:02:30</sys_updated_on>
+        <timeline_page/>
+        <title>Parking Home</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>
