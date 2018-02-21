@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="user" table="x_67546_parking_parking">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_67546_parking_registerd_users_for_parking">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -15,7 +15,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>User</column_label>
+        <column_label/>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -23,23 +23,23 @@
         <delete_roles/>
         <dependent/>
         <dependent_on_field/>
-        <display>true</display>
+        <display>false</display>
         <dynamic_creation>false</dynamic_creation>
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>user</element>
+        <element/>
         <element_reference>false</element_reference>
         <foreign_database/>
-        <internal_type display_value="Reference">reference</internal_type>
+        <internal_type display_value="Collection">collection</internal_type>
         <mandatory>false</mandatory>
-        <max_length>32</max_length>
-        <name>x_67546_parking_parking</name>
+        <max_length>40</max_length>
+        <name>x_67546_parking_registerd_users_for_parking</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="" name="x_67546_parking_registerd_users_for_parking">x_67546_parking_registerd_users_for_parking</reference>
+        <reference/>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -51,16 +51,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-02-19 20:34:03</sys_created_on>
-        <sys_id>18c8fc874f149b40a0a27bb28110c773</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>User</sys_name>
+        <sys_created_on>2018-02-21 03:41:56</sys_created_on>
+        <sys_id>b215eb934f18db40a0a27bb28110c7b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_67546_parking_registerd_users_for_parking</sys_name>
         <sys_package display_value="Parking" source="x_67546_parking">de3a3b764f509b40a0a27bb28110c781</sys_package>
         <sys_policy/>
         <sys_scope display_value="Parking">de3a3b764f509b40a0a27bb28110c781</sys_scope>
-        <sys_update_name>sys_dictionary_x_67546_parking_parking_user</sys_update_name>
+        <sys_update_name>sys_dictionary_x_67546_parking_registerd_users_for_parking_null</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-21 04:17:54</sys_updated_on>
+        <sys_updated_on>2018-02-21 03:41:56</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

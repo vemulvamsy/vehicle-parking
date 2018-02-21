@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="user_type" table="x_67546_parking_registerd_users_for_parking" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>user_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Vip</label>
+            <language>en</language>
+            <name>x_67546_parking_registerd_users_for_parking</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 03:43:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6375a3d34f18db40a0a27bb28110c7a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 03:43:37</sys_updated_on>
+            <value>Vip</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>user_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Regular</label>
+            <language>en</language>
+            <name>x_67546_parking_registerd_users_for_parking</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 03:43:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2f75a3d34f18db40a0a27bb28110c7f0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 03:43:37</sys_updated_on>
+            <value>Regular</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>user_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Visitor</label>
+            <language>en</language>
+            <name>x_67546_parking_registerd_users_for_parking</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 03:43:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ab75a3d34f18db40a0a27bb28110c7f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 03:43:37</sys_updated_on>
+            <value>Visitor</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>user_type</element>
+            <name>x_67546_parking_registerd_users_for_parking</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 03:43:37</sys_created_on>
+            <sys_id>6f75a3d34f18db40a0a27bb28110c7a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>user_type</sys_name>
+            <sys_package display_value="Parking" source="x_67546_parking">de3a3b764f509b40a0a27bb28110c781</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Parking">de3a3b764f509b40a0a27bb28110c781</sys_scope>
+            <sys_update_name>sys_choice_x_67546_parking_registerd_users_for_parking_user_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 03:43:37</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

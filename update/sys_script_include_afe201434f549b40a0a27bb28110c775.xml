@@ -13,13 +13,13 @@ ParkingUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	getParkingSlot : function(){
 		var user_id = this.getParameter('sysparm_user');
 		var user = this.getUserDetails(user_id);
-		gs.info("user details"+JSON.stringify(user),"park");
-		var parking_slot = this.getParkingBay(user.vip);
+		var parking_slot = this.getParkingBay(user.user_type);
 		var obj = {};
 		if(parking_slot == ''){
 			obj.slot = '';
 			obj.entry_time = '';
 			obj.user_name = user.name.toString();
+			obj.vehicle_number = '';
 			obj.msg = "Oh! Sorry, No Parking Slot Available";
 		}else{
 			var isUserParked = this.getUserParkingStatus(user_id);
@@ -28,7 +28,7 @@ ParkingUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 				var entry_time = new GlideDateTime();
 				var gr = new GlideRecord('x_67546_parking_parking');
 				gr.initialize();
-				gr.user = user.sys_id;
+				gr.user = user_id;
 				gr.parked_on = entry_time;
 				gr.slot_number = parking_slot;
 				gr.insert();
@@ -38,12 +38,14 @@ ParkingUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 				obj.entry_time = entry_time.toString();
 				obj.user_name = user.name.toString();
 				obj.msg = '';
+				obj.vehicle_number = user.vehicle_number.toString();
 				this.setAllottedStatus(parking_slot,true);
 			}else{
 				obj.slot = '';
 				obj.entry_time = '';
 				obj.user_name = user.name.toString();
 				obj.msg = 'Already you have parked your vehicle';
+				obj.vehicle_number = user.vehicle_number.toString();
 			}
 				
 		}
@@ -119,16 +121,15 @@ ParkingUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	},
 	getUserDetails : function(user){
 		gs.info("get user details:"+user,"park");
-		var gr = new GlideRecord('sys_user');
+		var gr = new GlideRecord('x_67546_parking_registerd_users_for_parking');
 		gr.addQuery('sys_id',user);
 		gr.addActiveQuery();
 		gr.query();
 		if(gr.next()){
 			var obj = {};
-			obj.name = gr.name.toString();
-			obj.sys_id = gr.sys_id.toString();
-			obj.vip = gr.vip.toString();
-			gs.info("user obj: "+obj,"park");
+			obj.name = gr.user_name.toString();
+			obj.vehicle_number = gr.vehicle_number.toString();
+			obj.user_type = gr.user_type.toString();
 			return obj;
 		}
 	},
@@ -136,122 +137,31 @@ ParkingUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 		var gr = new GlideRecord('x_67546_parking_parking_slots');
 		gr.addQuery('alloted',false);
 		gr.orderBy('sys_updated_on');
-		if(user_type == 'visitor'){
-			gr.addQuery('type','visitor');
-		}else{
-			if(user_type == true || user_type == 'true'){
-				gr.addQuery('type','vip');
-			}else{
-				gr.addQuery('type','regular');
-			}
-		}			
+		gr.addQuery('type',user_type);
 		gr.setLimit(1);
 		gr.query();
 		if(gr.next()){
-			gs.info("slot number: "+gr.slot_number,"park");
 			return gr.slot_number;
 		}else{
 			return '';
 		}
 	},
-	getVisitorUserParkingStatus : function(user_name){
-		var gr = new GlideRecord('x_67546_parking_visitor');
-		gr.addQuery('visitor_name',user_name);
-		gr.orderByDesc('sys_created_on');
-		gr.setLimit(1);
-		gr.query();
-		if(gr.next()){
-			if(gr.removed_on == '' || gr.removed_on == null){
-				return true;
-			}
-			return false;
-		}
-		return false;
-	},
-	getVisitorParkingSlot : function(){
-		var user_name = this.getParameter('sysparm_user');
-		var parking_slot = this.getParkingBay('visitor');
-		var obj = {};
-		if(parking_slot == ''){
-			obj.slot = '';
-			obj.entry_time = '';
-			obj.user_name = user_name.toString();
-			obj.msg = "Oh! Sorry, No Parking Slot Available";
-		}else{
-			var isUserParked = this.getVisitorUserParkingStatus(user_name);
-			if(isUserParked == false){
-				var entry_time = new GlideDateTime();
-				var gr = new GlideRecord('x_67546_parking_visitor');
-				gr.initialize();
-				gr.visitor_name = user_name;
-				gr.parked_on = entry_time;
-				gr.slot_number = parking_slot;
-				gr.insert();
-
-
-				obj.slot = parking_slot.toString();
-				obj.entry_time = entry_time.toString();
-				obj.user_name = user_name.toString();
-				obj.msg = '';
-				this.setAllottedStatus(parking_slot,true);
-			}else{
-				obj.slot = '';
-				obj.entry_time = '';
-				obj.user_name = user_name.toString();
-				obj.msg = 'Already you have parked your vehicle';
-			}
-				
-		}
-		gs.info("final obj: "+JSON.stringify(obj),"park");
-		return new global.JSON().encode(obj);
-	},
-	releaseVisitorParkingSlot : function(){
-		var obj = {};
-		var parking_time;
-		var exit_time;
-		var user_name = this.getParameter('sysparm_user');
-		var gr = new GlideRecord('x_67546_parking_visitor');
-		gr.addQuery('sys_id',user_name);
-		gr.orderByDesc('sys_created_on');
-		gr.setLimit(1);
-		gr.query();
-		if(gr.next()){
-			if(gr.removed_on == '' || gr.removed_on == null){
-				exit_time = new GlideDateTime();
-				var parking_slot = gr.slot_number;
-				gr.removed_on = exit_time;
-				parking_time = this.getTotalParkingTime(exit_time,gr.parked_on);
-				gr.update();
-				this.setAllottedStatus(parking_slot,false);
-
-				obj.time = parking_time.toString();
-				obj.exit_time = exit_time.toString();
-				obj.msg = '';
-			}else{
-				obj.time = '';
-				obj.exit_time = '';
-				obj.msg = 'You have taken your vehicle out already';
-			}				
-		}else{
-			obj.time = '';
-			obj.exit_time = '';
-			obj.msg = 'You have not parked any vehicle!';
-		}
-		return new global.JSON().encode(obj);
-	},
+	
+	
+	
     type: 'ParkingUtils'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-02-19 21:49:21</sys_created_on>
         <sys_id>afe201434f549b40a0a27bb28110c775</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>ParkingUtils</sys_name>
         <sys_package display_value="Parking" source="x_67546_parking">de3a3b764f509b40a0a27bb28110c781</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Parking">de3a3b764f509b40a0a27bb28110c781</sys_scope>
         <sys_update_name>sys_script_include_afe201434f549b40a0a27bb28110c775</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-20 21:13:30</sys_updated_on>
+        <sys_updated_on>2018-02-21 04:20:01</sys_updated_on>
     </sys_script_include>
 </record_update>

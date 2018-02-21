@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="d835af934f18db40a0a27bb28110c786" sys_domain="global" table="x_67546_parking_registerd_users_for_parking" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user_type</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 03:42:51</sys_created_on>
+            <sys_id>405523d34f18db40a0a27bb28110c7c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_registerd_users_for_parking" sys_domain="global" view="Default view">d835af934f18db40a0a27bb28110c786</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 03:42:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>vehicle_number</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 03:42:51</sys_created_on>
+            <sys_id>c05523d34f18db40a0a27bb28110c7c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_registerd_users_for_parking" sys_domain="global" view="Default view">d835af934f18db40a0a27bb28110c786</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 03:42:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 03:42:51</sys_created_on>
+            <sys_id>445523d34f18db40a0a27bb28110c7c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_registerd_users_for_parking" sys_domain="global" view="Default view">d835af934f18db40a0a27bb28110c786</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 03:42:51</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user_id</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 03:42:51</sys_created_on>
+            <sys_id>c45523d34f18db40a0a27bb28110c7c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_registerd_users_for_parking" sys_domain="global" view="Default view">d835af934f18db40a0a27bb28110c786</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 03:42:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user_name</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 03:42:51</sys_created_on>
+            <sys_id>485523d34f18db40a0a27bb28110c7c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_67546_parking_registerd_users_for_parking" sys_domain="global" view="Default view">d835af934f18db40a0a27bb28110c786</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 03:42:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_67546_parking_registerd_users_for_parking</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 03:42:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d835af934f18db40a0a27bb28110c786</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_67546_parking_registerd_users_for_parking</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Parking" source="x_67546_parking">de3a3b764f509b40a0a27bb28110c781</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Parking">de3a3b764f509b40a0a27bb28110c781</sys_scope>
+            <sys_update_name>sys_ui_section_d835af934f18db40a0a27bb28110c786</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 03:42:18</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

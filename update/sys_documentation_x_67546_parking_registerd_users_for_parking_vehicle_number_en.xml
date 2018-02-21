@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="vehicle_number" label="Vehicle number" language="en" table="x_67546_parking_registerd_users_for_parking">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>vehicle_number</element>
+            <help/>
+            <hint/>
+            <label>Vehicle number</label>
+            <language>en</language>
+            <name>x_67546_parking_registerd_users_for_parking</name>
+            <plural>Vehicle numbers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 03:41:57</sys_created_on>
+            <sys_id>0315eb934f18db40a0a27bb28110c7d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Vehicle number</sys_name>
+            <sys_package display_value="Parking" source="x_67546_parking">de3a3b764f509b40a0a27bb28110c781</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Parking">de3a3b764f509b40a0a27bb28110c781</sys_scope>
+            <sys_update_name>sys_documentation_x_67546_parking_registerd_users_for_parking_vehicle_number_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 03:41:57</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
